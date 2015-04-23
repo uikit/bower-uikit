@@ -3,12 +3,10 @@
     "version": "2.19.0",
     "homepage": "http://getuikit.com",
     "main": [
-        "css/uikit.min.css",
-        "js/uikit.min.js",
-        "fonts/fontawesome-webfont.eot",
-        "fonts/fontawesome-webfont.ttf",
-        "fonts/fontawesome-webfont.woff",
-        "fonts/FontAwesome.otf"
+        "css/components/accordion.css",
+        "less/components/accordion.less",
+        "scss/components/accordion.scss",
+        "js/components/accordion.js"
     ],
     "dependencies": {
         "jquery": ">= 1.9.0"
@@ -19,7 +17,16 @@
         "docs",
         "vendor",
         "composer.json",
-        "index.html"
+        "index.html",
+        "fonts/*",
+        "css/*",
+        "!css/accordion.css",
+        "less/*",
+        "!less/accordion.less",
+        "scss/*",
+        "!scss/accordion.scss",
+        "js/*",
+        "!js/accordion.js",
     ],
-    "private": true
+    "private": false
 }
