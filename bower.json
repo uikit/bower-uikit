@@ -26,7 +26,7 @@
         "scss/*",
         "!scss/accordion.scss",
         "js/*",
-        "!js/accordion.js",
+        "!js/accordion.js"
     ],
     "private": false
 }
