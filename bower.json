@@ -28,5 +28,5 @@
         "js/*",
         "!js/accordion.js",
     ],
-    "private": false
+    "private": true
 }
