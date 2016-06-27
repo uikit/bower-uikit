@@ -1,0 +1,217 @@
+/*===========================================================================*/
+/* by AlekVolsk                                                              */
+/*===========================================================================*/
+
+
+@import 'uikit.less'; // based less
+
+
+// variables
+// ============================================================================
+
+@breakpoint-hd:                                 1700px;
+@breakpoint-xlarge-max:                         (@breakpoint-hd - 1);
+
+@utility-container-hd-max-width:                @breakpoint-hd;
+@utility-container-hd-padding-horizontal:       50px;
+
+@modal-dialog-hd-width:                         (@utility-container-hd-max-width - (@utility-container-hd-padding-horizontal * 2));
+
+@grid-gutter-hd-horizontal:                     50px;
+@grid-gutter-hd-vertical:                       50px;
+
+
+// utility
+// ============================================================================
+
+@media (min-width: @breakpoint-hd)
+{
+	.uk-container
+	{
+		max-width: @utility-container-hd-max-width;
+		min-width: @utility-container-hd-max-width;
+		width: @utility-container-hd-max-width;
+		padding: 0 @utility-container-hd-padding-horizontal;
+	}
+
+	.uk-visible-large { display: none !important; }
+	.uk-hidden-hd { display: none !important; }
+}
+
+@media (max-width: @breakpoint-xlarge-max)
+{
+	.uk-visible-hd { display: none !important; }
+}
+
+/* special addon for phone portail screen */
+@media (max-width: @breakpoint-mini-max)
+{
+	.uk-hidden-mini { display: none !important; }
+	.uk-visible-mini { display: block !important; }
+}
+
+
+// grid
+// ============================================================================
+
+@media (min-width: @breakpoint-hd)
+{
+	.uk-grid { margin-left: -@grid-gutter-hd-horizontal; }
+	.uk-grid > * { padding-left: @grid-gutter-hd-horizontal; }
+
+	.uk-grid + .uk-grid,
+	.uk-grid-margin,
+	.uk-grid > * > .uk-panel + .uk-panel { margin-top: @grid-gutter-hd-vertical; }
+
+	.uk-grid-divider:not(:empty)
+	{
+		margin-left: -@grid-gutter-hd-horizontal;
+		margin-right: -@grid-gutter-hd-horizontal;
+	}
+
+	.uk-grid-divider > *
+	{
+		padding-left: @grid-gutter-hd-horizontal;
+		padding-right: @grid-gutter-hd-horizontal;
+	}
+
+	.uk-grid-divider:empty
+	{
+		margin-top: @grid-gutter-hd-vertical;
+		margin-bottom: @grid-gutter-hd-vertical;
+	}
+
+	.uk-grid-width-hd-1-1 > * { width: 100%; }
+	.uk-grid-width-hd-1-2 > * { width: 50%; }
+	.uk-grid-width-hd-1-3 > * { width: 33.333%; }
+	.uk-grid-width-hd-1-4 > * { width: 25%; }
+	.uk-grid-width-hd-1-5 > * { width: 20%; }
+	.uk-grid-width-hd-1-6 > * { width: 16.666%; }
+	.uk-grid-width-hd-1-10 > * { width: 10%; }
+
+	.uk-width-hd-1-1 { width: 100%; }
+
+	.uk-width-hd-1-2,
+	.uk-width-hd-2-4,
+	.uk-width-hd-3-6,
+	.uk-width-hd-5-10 { width: 50%; }
+
+	.uk-width-hd-1-3,
+	.uk-width-hd-2-6 { width: 33.333%; }
+	.uk-width-hd-2-3,
+	.uk-width-hd-4-6 { width: 66.666%; }
+
+	.uk-width-hd-1-4 { width: 25%; }
+	.uk-width-hd-3-4 { width: 75%; }
+
+	.uk-width-hd-1-5,
+	.uk-width-hd-2-10 { width: 20%; }
+	.uk-width-hd-2-5,
+	.uk-width-hd-4-10 { width: 40%; }
+	.uk-width-hd-3-5,
+	.uk-width-hd-6-10 { width: 60%; }
+	.uk-width-hd-4-5,
+	.uk-width-hd-8-10 { width: 80%; }
+
+	.uk-width-hd-1-6 { width: 16.666%; }
+	.uk-width-hd-5-6 { width: 83.333%; }
+
+	.uk-width-hd-1-10 { width: 10%; }
+	.uk-width-hd-3-10 { width: 30%; }
+	.uk-width-hd-7-10 { width: 70%; }
+	.uk-width-hd-9-10 { width: 90%; }
+
+}
+
+
+// column
+// ============================================================================
+
+@media (min-width: @breakpoint-hd)
+{
+	.uk-column-hd-1-2
+	{
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+
+	.uk-column-hd-1-3
+	{
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+
+	.uk-column-hd-1-4
+	{
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+
+	.uk-column-hd-1-5
+	{
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+
+	.uk-column-hd-1-6
+	{
+		-webkit-column-count: 6;
+		-moz-column-count: 6;
+		column-count: 6;
+	}
+
+	.uk-column-hd-1-8
+	{
+		-webkit-column-count: 8;
+		-moz-column-count: 8;
+		column-count: 8;
+	}
+
+	.uk-column-hd-1-9
+	{
+		-webkit-column-count: 9;
+		-moz-column-count: 9;
+		column-count: 9;
+	}
+
+	.uk-column-hd-1-10
+	{
+		-webkit-column-count: 10;
+		-moz-column-count: 10;
+		column-count: 10;
+	}
+}
+
+
+// flex
+// ============================================================================
+
+@media (min-width: @breakpoint-hd)
+{
+	.uk-flex-order-first-hd
+	{
+		-ms-flex-order: -1;
+		-webkit-order: -1;
+		order: -1;
+	}
+
+	.uk-flex-order-last-hd
+	{
+		-ms-flex-order: 99;
+		-webkit-order: 99;
+		order: 99;
+	}
+}
+
+
+// modal
+// ============================================================================
+
+@media (min-width: @breakpoint-hd)
+{
+	.uk-modal-dialog-hd { width: @modal-dialog-hd-width; }
+}
